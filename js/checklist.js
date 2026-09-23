@@ -1,0 +1,1 @@
+document.getElementById('print-checklist').addEventListener('click',()=>window.print());const boxes=[...document.querySelectorAll('.checklist-question input')];boxes.forEach(box=>box.addEventListener('change',()=>document.getElementById('checklist-progress').textContent=boxes.filter(b=>b.checked).length+' of 20 addressed'));

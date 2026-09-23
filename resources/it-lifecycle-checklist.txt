@@ -1,0 +1,40 @@
+COMPRINT · IT LIFECYCLE PLANNING CHECKLIST
+20 questions. Five stages.
+
+ACQUIRE
+Start with outcomes, then compare the options.
+[ ] Which workloads and business outcomes must the technology support?
+[ ] What capacity do you need now, and over the next 12–36 months?
+[ ] Have you compared new, refurbished and rental options for this workload?
+[ ] Does the comparison include software, deployment, support and end-of-use costs?
+
+DEPLOY
+Make day one part of the plan.
+[ ] Which sites, teams and dates are in the rollout?
+[ ] What configuration, imaging and software setup is required?
+[ ] Who owns delivery, installation, testing and acceptance?
+[ ] Are migration, downtime windows and rollback arrangements documented?
+
+MANAGE
+Define support before you need it.
+[ ] Which assets and locations are included in the support scope?
+[ ] What service hours, response commitments and escalation paths are agreed?
+[ ] Who owns asset records, warranty dates and service history?
+[ ] How will replacement equipment, repairs and software updates be handled?
+
+EXTEND
+Ask what can keep working.
+[ ] Can memory, storage or component upgrades meet the next requirement?
+[ ] Are compatible spares available for the expected remaining service life?
+[ ] Which assets could be repaired, refurbished or redeployed?
+[ ] When should you review the cost of maintaining versus replacing each asset?
+
+RETIRE
+Plan the exit while you still control the asset.
+[ ] Do you have an asset list with model, serial number, condition and ownership?
+[ ] What data handling, sanitisation and verification evidence do you require?
+[ ] Who owns collection, chain of custody and disposition records?
+[ ] Have buyback, reuse and refurbishment been assessed before recycling?
+
+Discuss your project: sales@comprint.co.in
+Comprint Tech Solutions (I) Pvt Ltd

@@ -1,0 +1,37 @@
+# Comprint Tech Solutions
+
+> Comprint is a Mumbai-headquartered IT lifecycle company founded in 1993. One lifecycle. One partner. One accountability.
+
+The corporate site helps visitors understand their requirements and find the relevant specialists. It covers acquire, deploy, manage, extend and retire. Configuration, availability, support coverage and commercials are confirmed for each project.
+
+## Lifecycle businesses
+- ServerStore (https://serverstore.in/): New enterprise hardware, storage, networking and devices.
+- Rentr (https://rentr.in/): IT rentals and leasing.
+- Refurbr (https://refurbr.in/): Refurbished endpoints and enterprise compute.
+- Host360 (https://host360.ai/): Private cloud, hosting and colocation.
+- Troubleshootr (https://comprint.co.in/businesses/troubleshootr.html): Maintenance, repair and onsite support.
+- Maxtone (https://comprint.co.in/businesses/maxtone.html): Components, upgrades and spares.
+- Ecotribe (https://ecotribe.co/): Asset buyback, data disposition and responsible retirement.
+- AINextLabs (https://comprint.co.in/ainextlabs.html): Enterprise AI, private GPU environments and embedded engineers.
+
+## Corporate pages
+- [Home](https://comprint.co.in/): Interactive lifecycle, equal business directory, industry routing and guided enquiry.
+- [Enterprises](https://comprint.co.in/enterprises.html): Infrastructure and lifecycle services for businesses.
+- [Partners](https://comprint.co.in/partners.html): Channel partnerships.
+- [Technology alliances](https://comprint.co.in/oem.html): OEM ecosystem.
+- [Insights](https://comprint.co.in/insights.html): Articles and award stories.
+- [Careers](https://comprint.co.in/careers.html): Roles and career opportunities.
+- [IT Lifecycle Planning Checklist](https://comprint.co.in/resources/it-lifecycle-checklist.html): Free, printable 20-question planning resource.
+
+## Enquiries
+Start at https://comprint.co.in/index.html#rfq or contact sales@comprint.co.in. In the local preview the guided form prepares an enquiry for email or download. A live CRM submission must not be assumed until the integration is configured.
+
+## Industry routes
+- https://comprint.co.in/industries/bfsi.html
+- https://comprint.co.in/industries/datacentres-cloud.html
+- https://comprint.co.in/industries/education-research.html
+- https://comprint.co.in/industries/government-psu.html
+- https://comprint.co.in/industries/it-ites-gcc.html
+- https://comprint.co.in/industries/manufacturing.html
+- https://comprint.co.in/industries/pharma-healthcare.html
+- https://comprint.co.in/industries/retail-ecommerce.html
