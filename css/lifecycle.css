@@ -41,3 +41,134 @@
 .technology-logos a{display:flex;align-items:center;justify-content:center;width:110px;height:52px;padding:9px;flex-shrink:1}.technology-logos img{max-width:100%;max-height:34px;width:auto;height:auto;object-fit:contain;filter:grayscale(1);opacity:.75}.technology-logos a:hover img{filter:none;opacity:1}.technology-logos a:before{display:none}.technology-logos a[href$='#intel'] img{max-width:67px}.technology-logos a[href$='#amd'] img{max-width:84px}@media(max-width:600px){.technology-logos a{width:86px;height:43px;padding:8px}.technology-logos img{max-height:26px}.technology-logos a[href$='#intel'] img{max-width:54px}.technology-logos a[href$='#amd'] img{max-width:66px}}
 /* The arrow travels along the existing elliptical lifecycle orbit. */
 .lifecycle-art{--orbit-ink:#ededed}.orbit-trail{fill:none;stroke:var(--orbit-ink);stroke-width:2;stroke-linecap:round;opacity:.65}.orbit-head path{fill:none;stroke:var(--orbit-ink);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}.motion-toggle{display:inline-flex;align-items:center;gap:7px;position:absolute;right:0;bottom:-23px;border:0;background:none;color:#929bA8;padding:5px 0;font-size:10px;line-height:1.3;z-index:1}.motion-toggle:hover{color:var(--orbit-ink)}.motion-toggle span{font-size:11px;min-width:10px}.lifecycle-art[data-motion-paused=true] .core-stack{animation-play-state:paused}html[data-theme=navy] .lifecycle-art{--orbit-ink:#255baa}html[data-theme=navy] .motion-toggle{color:#526d90}.art-caption{padding-bottom:3px}@media(max-width:600px){.motion-toggle{bottom:-18px;font-size:9px}.lifecycle-art{margin-bottom:20px}}@media(prefers-reduced-motion:reduce){.motion-toggle{display:none}}
+
+/* ============================================================
+   RESPONSIVE HARDENING — phones 320–430px, tablets 600–1100px
+   Root-cause fixes found by scanning every page at 320/375/414/768/834/1024.
+   ============================================================ */
+/* Safety net: never allow a stray element to create horizontal page scroll.
+   `clip` (not hidden) keeps position:sticky headers working. */
+html{overflow-x:clip}
+body{overflow-wrap:break-word}
+
+/* Header: the CTA must stay on one line; below 420px the logo, cart, CTA and
+   burger did not fit and the burger was pushed past the right edge. */
+.nav-actions .button.small{white-space:nowrap;flex-shrink:0}
+.nav-actions{flex-shrink:0}
+.wordmark{min-width:0}
+@media(max-width:420px){
+  .navigation{gap:12px}
+  .nav-actions{gap:8px}
+  .comprint-logo{width:118px}
+  .nav-actions .button.small{gap:8px;padding-inline:12px;font-size:12px;min-height:38px}
+  .cart-link{width:36px;height:36px}
+}
+@media(max-width:360px){
+  .comprint-logo{width:96px}
+  .nav-actions .button.small span{display:none}
+  .nav-actions .button.small{padding-inline:11px;gap:0}
+  .cart-link{width:34px;height:34px}
+  .mobile-toggle{width:32px;padding:8px 4px}
+}
+
+/* Top line: keep it legible on phones (was 8px). */
+@media(max-width:600px){
+  .topline{font-size:9px}
+  .topline a{font-size:10px}
+  .topline .container{gap:12px;padding-block:8px}
+  .topline .container>span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+}
+
+/* Homepage OEM strip: six 110px logos plus copy and arrow needed ~1030px,
+   so it overflowed on every tablet. Let logos shrink and wrap instead. */
+@media(max-width:1100px){
+  .technology-names{flex-wrap:wrap;gap:12px 14px;min-width:0}
+  .technology-logos a{width:96px;height:48px;padding:8px}
+  .alliances-link{flex-shrink:0}
+}
+@media(max-width:850px){
+  .technology-names{justify-content:flex-start}
+}
+
+/* Homepage hero baseline: allow the "New + Rental + …" row to wrap on narrow phones. */
+@media(max-width:600px){
+  .hero-baseline{padding-block:14px;min-height:0;flex-wrap:wrap}
+  .hero-baseline>div{flex-wrap:wrap;row-gap:6px}
+}
+
+/* Lifecycle tabs: five labels did not fit in five equal columns below ~400px. */
+@media(max-width:400px){
+  .lifecycle-tabs button{font-size:13px;padding-right:2px;letter-spacing:-.03em}
+  .lifecycle-tabs button>span:first-child{font-size:8px;margin-bottom:9px}
+}
+@media(max-width:340px){
+  .lifecycle-tabs button{font-size:12px}
+}
+
+/* Large display headings: clamp on very narrow phones so single words never overflow. */
+@media(max-width:400px){
+  .hero-copy h1{font-size:clamp(42px,14.5vw,53px)}
+  .enquiry-copy h2{font-size:clamp(40px,14.5vw,63px)}
+  .section-heading h2,.why-intro h2,.faq-grid h2,.resource-copy h2{font-size:clamp(30px,10.5vw,40px)}
+  .since-block>span{font-size:clamp(44px,15vw,61px)}
+  .detail-hero h1,.legacy-page h1{font-size:clamp(34px,11.5vw,45px)}
+  .legacy-page .article h1{font-size:clamp(30px,10vw,40px)}
+  .stage-story h3{font-size:clamp(26px,9vw,32px)}
+  .footer-top .wordmark .comprint-logo{width:180px}
+  .footer-top p{font-size:19px}
+}
+
+/* Industry pages: award attribution was nowrap and overflowed on phones. */
+@media(max-width:850px){
+  .award .who{white-space:normal;line-height:1.6}
+  .award-in{align-items:flex-start}
+}
+
+/* Forms: iOS Safari zooms the page when a focused field is under 16px.
+   Keep the visual scale of labels, but give the controls a 16px font. */
+@media(max-width:600px){
+  .new-form-row input,.new-form-row select,.full-field textarea,.checklist-notes textarea{font-size:16px}
+  .new-form-row input,.new-form-row select{padding:11px 10px}
+}
+
+/* Touch targets: give small text links some vertical tap room (44px guidance). */
+@media(hover:none) and (pointer:coarse){
+  .footer-columns a{padding-block:4px;margin-bottom:4px}
+  .footer-bottom a,.topline a,.hero-baseline>div a{padding-block:6px;display:inline-block}
+  .nav-dropdown a{padding:14px 12px}
+  .desktop-nav.mobile-open>a,.desktop-nav.mobile-open .nav-disclosure>summary{padding-block:6px}
+  .quiet-link,.text-link,.business-link,.hero-link{padding-block:4px}
+  .faq-list summary{min-height:48px}
+}
+
+/* Industry/legacy heroes reuse the homepage .hero-grid class, whose phone rule
+   sets gap:0 — the caption then collided with the "at a glance" rack panel. */
+.legacy-page .hero-grid{gap:48px 64px;min-height:0}
+@media(max-width:600px){.legacy-page .hero-grid{gap:40px}}
+
+/* Top line: the right-hand link must never wrap; truncate the left tagline instead. */
+@media(max-width:600px){
+  .topline .container{align-items:center}
+  .topline a{white-space:nowrap;flex-shrink:0}
+}
+
+/* OEM strip between 851 and 1000px: slightly smaller logos so all six sit on one row. */
+@media(min-width:851px) and (max-width:1000px){
+  .credibility-strip p{min-width:140px}
+  .technology-names{gap:12px}
+  .technology-logos a{width:84px;height:44px;padding:7px}
+}
+/* Phones: logos fill their 3-column cells rather than a fixed width. */
+@media(max-width:600px){
+  .technology-names{gap:16px}
+  .technology-logos a{width:100%;max-width:96px;height:44px;justify-self:center}
+}
+
+/* 851–1000px (small tablets, large phones in landscape): the full link row needs
+   ~950px and labels were wrapping onto two lines. Use the burger menu here too. */
+@media(min-width:851px) and (max-width:1000px){
+  .desktop-nav{display:none}
+  .mobile-toggle{display:block}
+  .desktop-nav.mobile-open{display:flex;position:absolute;top:88px;left:0;right:0;flex-direction:column;align-items:stretch;background:#1c1c1c;padding:25px 32px;gap:24px;max-height:calc(100dvh - 88px);overflow:auto}
+  .desktop-nav.mobile-open .nav-dropdown{position:static;min-width:0;margin-top:15px;box-shadow:none}
+}
